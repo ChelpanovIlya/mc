@@ -3033,6 +3033,7 @@ ret:
 ret_fast:
     vfs_path_free (src_vpath, TRUE);
     vfs_path_free (dst_vpath, TRUE);
+    ctx->do_reget = -1;  // reinit for a next file
     return return_status;
 }
 
